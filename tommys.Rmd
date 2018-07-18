@@ -1,0 +1,27 @@
+---
+title: "Creating Data Products Project 1"
+author: "cjpurington"
+date: "July 18, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+my_map <- leaflet () %>%
+        addTiles()
+my_map
+```
+
+## R Markdown
+
+This is a map created by Leaflet for the Coursera "Developing Data Products" course. It shows the location of Original Tommy's Burgers in Los Angeles, CA, a fine place to order a chili burger. It's often imitated but there's nothing quite like the original Tommy's. If it don't got the shack, take it back!
+
+
+```{r map2}
+library(leaflet)
+my_map <- my_map %>%
+        addMarkers(lat=34.069802, lng=-118.276577,
+                   popup="Original Tommy's Hamburgers")
+my_map
+```
